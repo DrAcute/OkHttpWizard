@@ -4,15 +4,19 @@
 
 ### 特点
 
-使用编译时注解来构建http访问代码。
+仿Retrofit，但是采用编译时注解。解决json解析包装基本对象时，冗余代码的问题。
 
 利用编译时能访问到泛型具体类型的特点，拼装具体的Type类型，并反序列化对象。
 适于用于json中带有返回基本信息如`{'state':{'code':1, 'msg':''}, 'data':{}}`的http访问，
-可自定义返回，做简单的逻辑处理，并抽出data对象
+可自定义返回，做简单的逻辑处理，并抽出data对象。
 
 支持上传和下载 (断点下载)
 
 支持FORM_DATA和X_WWW_FORM_URLENCODED两种RequestBody格式
+
+### 缺点
+
+无法像Retrofit自定义json解析adpter
 
 ### gradle
 
